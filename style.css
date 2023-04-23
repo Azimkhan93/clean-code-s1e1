@@ -17,7 +17,7 @@ body {
     font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 .eisenhover-matrix { text-align: center;
 }
 }
@@ -138,11 +138,11 @@ ul#completed-tasks label {
 }
 
 /* Edit Task */
-ul li input[type=text] {
+ul li input[type="text"] {
     display: none;
 }
 
-.todo__incomplete-item_edit-mode input[type=text] {
+.todo__incomplete-item_edit-mode input[type="text"] {
     display: inline-block;
     width: 224px;
 }

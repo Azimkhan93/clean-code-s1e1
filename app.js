@@ -33,7 +33,7 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='todo__task';
+    label.className="todo__task";
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -44,7 +44,7 @@ var createNewTaskElement=function(taskString){
     editButton.className="todo__edit-button"; //className="edit" было
 
     deleteButton.className="todo__delete-button"; //className="delete" было
-    deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.src="./remove.svg";
     deleteButtonImg.className="todo__delete-img"
     deleteButton.appendChild(deleteButtonImg);
 
@@ -83,7 +83,7 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type=text]');
+    var editInput=listItem.querySelector("input[type=text]");
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".todo__edit-button");  //querySelector(".edit"); было
     var containsClass=listItem.classList.contains("todo__incomplete-item_edit-mode"); //classList.contains("editMode")было
