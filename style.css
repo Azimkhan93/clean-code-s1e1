@@ -10,10 +10,10 @@ body {
     display: block;
     text-align: right;
 }
-.eisenhover-matrix img {
+.eisenhover-matrix__image {
     width: 100%;
 }
-.eisenhover-matrix .eisenhover-matrix__link {
+.eisenhover-matrix__link {
     font-family: fantasy, cursive;
 }
 
