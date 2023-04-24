@@ -86,10 +86,10 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector(".todo__input"); //"input[type=text]" было
+    var editInput=listItem.querySelector(".todo__input");
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".todo__edit-button");  //querySelector(".edit"); было
-    var containsClass=listItem.classList.contains("todo__incomplete-item_edit-mode"); //classList.contains("editMode")было
+    var editBtn=listItem.querySelector(".todo__edit-button");
+    var containsClass=listItem.classList.contains("todo__incomplete-item_edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -103,7 +103,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("todo__incomplete-item_edit-mode"); //toggle("editMode") было
+    listItem.classList.toggle("todo__incomplete-item_edit-mode");
 };
 
 
@@ -160,8 +160,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.todo__edit-button"); //querySelector("button.edit"); было
-    var deleteButton=taskListItem.querySelector("button.todo__delete-button"); //querySelector("button.delete") было
+    var editButton=taskListItem.querySelector("button.todo__edit-button");
+    var deleteButton=taskListItem.querySelector("button.todo__delete-button");
 
 
     //Bind editTask to edit button.

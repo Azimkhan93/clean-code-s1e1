@@ -34,7 +34,6 @@ body {
     margin: 0 auto 0;
 }
 
-/* несколько классов, потому что .task */
 .todo__label,
 .todo__input { 
     width: 56%;
