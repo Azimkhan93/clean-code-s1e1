@@ -28,7 +28,7 @@ body {
 }
 
 /* несколько классов, потому что .task */
-.todo__task { 
+.todo__label, .todo__input { 
     width: 56%;
     display: inline-block;
     flex-grow: 1;
@@ -46,7 +46,7 @@ li, h3 {
 input,button{
     outline: none;
 }
-button {
+.todo__add-button, .todo__edit-button, .todo__delete-button{
     background: none;
     border: 0px;
     color: #888;
@@ -55,12 +55,14 @@ button {
     font-family: Lato, sans-serif;
     cursor: pointer;
 }
-button:hover {
+.todo__add-button:hover,
+.todo__edit-button:hover,
+.todo__delete-button:hover {
     color: #3a3a3a;
 }
 /* Heading */
-h3,
-.todo__label {
+.todo__heading,
+.todo__label_new-task-style {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -68,8 +70,9 @@ h3,
     padding: 30px 0 10px;
     margin: 0;
     text-transform: uppercase;
+    width: 100%;
 }
-input[type="text"] {
+.todo__input_grey-style {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -81,23 +84,23 @@ input[type="text"] {
     font-family: Lato, sans-serif;
     color: #888;
 }
-input[type="text"]:focus {
+.todo__input_grey-style:focus {
     color: #333;
 }
 
 /* New Task */
-.todo__label {
+.todo__label_new-task-style {
     display: block;
     margin: 0 0 20px;
 }
 
-/* поменять, потому что тэговый селектор */
-input#new-task {
+
+#new-task {
     width: 318px;
 }
 
 /* Task list */
-li {
+.todo__incomplete-item, .todo__complete-item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -106,20 +109,22 @@ li {
     justify-content: space-between;
     align-items: center;
 }
-li > * {
+.todo__incomplete-item > *, .todo__complete-item > * {
     vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.todo__checkbox {
     margin: 0 10px;
 }
-li > label {
+.todo__incomplete-item > .todo__label, 
+.todo__complete-item > .todo__label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
 }
-li >    input[type="text"] {
+.todo__incomplete-item > .todo__input,
+.todo__complete-item > .todo__input {
     width: 226px;
 }
 .todo__delete-img {
@@ -132,21 +137,22 @@ li >    input[type="text"] {
 }
 
 /* Completed */
-ul#completed-tasks label {
+.todo__complete-list .todo__label {
     text-decoration: line-through;
     color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.todo__incomplete-item .todo__input,
+.todo__complete-item .todo__input  {
     display: none;
 }
 
-.todo__incomplete-item_edit-mode input[type="text"] {
+.todo__incomplete-item_edit-mode .todo__input {
     display: inline-block;
     width: 224px;
 }
 
-.todo__incomplete-item_edit-mode label {
+.todo__incomplete-item_edit-mode .todo__label {
     display: none;
 }
