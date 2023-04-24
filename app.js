@@ -32,13 +32,16 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
+    listItem.className="todo__incomplete-item";
+
     label.innerText=taskString;
     label.className="todo__label";
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="todo__checkbox"
     editInput.type="text";
-    editInput.className="todo__input";
+    editInput.className="todo__input todo__input_grey-style";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="todo__edit-button"; //className="edit" было
@@ -83,7 +86,7 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector("input[type=text]");
+    var editInput=listItem.querySelector(".todo__input"); //"input[type=text]" было
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".todo__edit-button");  //querySelector(".edit"); было
     var containsClass=listItem.classList.contains("todo__incomplete-item_edit-mode"); //classList.contains("editMode")было
